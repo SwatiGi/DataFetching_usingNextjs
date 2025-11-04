@@ -1,5 +1,5 @@
 "use client"
-
+import Link from "next/link"
 import { useState } from "react"
 import {useRouter} from "next/navigation"
 export default function LoginPage() {
@@ -34,7 +34,7 @@ export default function LoginPage() {
             }
         })
         if (res.ok) {
-        router.push("/")
+        router.push("/product")
         } else {
         alert("Login failed")
         }
@@ -78,12 +78,14 @@ export default function LoginPage() {
     />
   </div>
 
-  <button
+       
+        <button
     type="submit"
-    className="mt-4 bg-pink-500 hover:bg-pink-600 dark:bg-pink-700 dark:hover:bg-pink-600 text-white font-semibold py-2 rounded-lg transition-all duration-200"
+    className="mt-4 bg-pink-500 hover:bg-pink-600 dark:bg-pink-700 dark:hover:bg-pink-600 text-white font-semibold py-2 rounded-lg transition-all duration-200 cursor-pointer" 
   >
     Login
   </button>
+        
 </form>
 
     </div>
