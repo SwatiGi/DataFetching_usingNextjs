@@ -39,31 +39,8 @@ export default function Home() {
 
   return (
     <>
-      <nav className="p-2 flex items-center justify-between bg-pink-600 shadow shadow-pink-400">
 
-        <div className="text-xl flex items-center justify-center m-2">
 
-          <IoHome />
-          <Link className="pl-2" href="/">Home</Link>
-        </div>
-        <div className="text-xl flex items-center justify-center m-2">
-          <FcAbout />
-          <Link className="pl-2" href="/pruduct/product">Product</Link>
-
-        </div>
-        <div className="text-xl flex items-center justify-center m-2">
-          <MdOutlineProductionQuantityLimits />
-          <Link className="pl-2" href="/pruduct/about">About</Link>
-
-        </div>
-        <div className="text-xl flex items-center justify-center m-2">
-          <CiCalculator1 />
-          <Link className="pl-2" href="/pruduct/contect">Contect</Link>
-
-        </div>
-
-      </nav>
-      {/* <Image  ></Image> */}
       <img src='banner.jpg' className="w-full absolute h-[40%]" alt='girlImage' />
       <div className="flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-black font-sans text-black dark:text-white mt-[300] p-6">
         {loading ? (

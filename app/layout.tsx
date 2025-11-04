@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import { IoHome } from "react-icons/io5";
+import { MdOutlineProductionQuantityLimits } from "react-icons/md"
+import { CiCalculator1 } from "react-icons/ci";
+import { FcAbout } from "react-icons/fc";
+import Link from "next/link";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,6 +31,35 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="p-2 flex items-center justify-between bg-pink-600 shadow shadow-pink-400">
+          <div className="text-xl  flex items-center justify-center m-2">
+
+            <img src="swati.png" className="w-16 rounded-full shadow shadow-purple-600" alt="" />
+          </div>
+          <div className="flex w-[60%] items-center justify-between  ">
+            <div className="text-xl flex items-center justify-center m-2">
+
+              <IoHome />
+              <Link className="pl-2" href="/">Home</Link>
+            </div>
+            <div className="text-xl flex items-center justify-center m-2">
+              <FcAbout />
+              <Link className="pl-2" href="/pruduct/product">Product</Link>
+
+            </div>
+            <div className="text-xl flex items-center justify-center m-2">
+              <MdOutlineProductionQuantityLimits />
+              <Link className="pl-2" href="/pruduct/about">About</Link>
+
+            </div>
+            <div className="text-xl flex items-center justify-center m-2">
+              <CiCalculator1 />
+              <Link className="pl-2" href="/pruduct/contect">Contect</Link>
+
+            </div>
+          </div>
+
+        </header>
         {children}
       </body>
     </html>
