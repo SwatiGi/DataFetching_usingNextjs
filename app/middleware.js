@@ -10,6 +10,6 @@ export async function middleware(req) {
     }
     return NextResponse.next()
 }
-export const donfig = {
+export const config = {
   matcher:["/dashboard/:path"]
 }

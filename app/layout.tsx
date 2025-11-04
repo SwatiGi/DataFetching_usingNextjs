@@ -6,6 +6,7 @@ import { MdOutlineProductionQuantityLimits } from "react-icons/md"
 import { CiCalculator1 } from "react-icons/ci";
 import { FcAbout } from "react-icons/fc";
 import Link from "next/link";
+import Providers from "./providers"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -60,7 +61,9 @@ export default function RootLayout({
           </div>
 
         </header>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
